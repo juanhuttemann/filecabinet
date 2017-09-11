@@ -1,6 +1,12 @@
-%h1= @doc.title
-%p= @doc.content
+%section#feature.section-padding
+  .container
+    .row
+      .col-md-6
+        .section-title
+          %h2.head-titl= @doc.title
+          %hr.botm-line
+            %p= @doc.content
 
-= link_to "All Docs", docs_path
-= link_to "Edit Doc", edit_doc_path(@doc)
-= link_to "Delete", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?"}
+            = link_to "All Docs", docs_path
+            = link_to "Edit Doc", edit_doc_path(@doc)
+            = link_to "Delete", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?"}

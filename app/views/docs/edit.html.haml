@@ -1,4 +1,10 @@
-%h1 Edit Doc!
-= render 'form'
+%section#feature.section-padding
+  .container
+    .row
+      .col-md-6
+        .section-title
+          %h2.head-title Edit Doc
+          %hr.botm-line
+            = render 'form'
 
-= link_to "Cancel", docs_path
+            = link_to "Cancel", docs_path

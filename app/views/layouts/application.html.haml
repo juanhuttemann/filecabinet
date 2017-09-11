@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title File Cabinet
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title File Cabinet
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/animate.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/css/style.css", :rel => "stylesheet", :type => "text/css"}/
+
+
+  %body
+    = render 'partials/menu'
+    = yield
+    = render 'partials/footer'
+    %script{src:"/js/jquery.min.js"}
+    %script{src:"/js/bootstrap.min.js"}
+
+    - if current_page?("/") && !user_signed_in?
+      %script{src:"/js/jquery.easing.min.js"}
+      %script{src:"/js/wow.js"}
+      %script{src:"/js/custom.js"}
