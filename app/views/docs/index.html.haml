@@ -3,10 +3,16 @@
     .row
       .col-md-6
         .section-title
-          %h2.head-title Docs
-          %hr.botm-line
-          - @docs.each do |doc|
-            %h2= link_to doc.title, doc
-            %p= time_ago_in_words doc.created_at
-            %p= truncate(doc.content, lenght:50)
-          %hr
+          %h2.head-title
+          -if @docs.size < 1
+            %p There are no documents yet!
+            %p Start adding one :)
+            = link_to "Create Doc", new_doc_path, class:"btn btn-success"
+          -else
+            %h2.head-title Docs
+            %hr.botm-line
+            - @docs.each do |doc|
+              %h2= link_to doc.title, doc
+              %p= time_ago_in_words doc.created_at
+              %p= truncate(doc.content, lenght:50)
+            %hr

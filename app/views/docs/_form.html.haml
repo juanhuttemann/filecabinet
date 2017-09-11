@@ -1,4 +1,7 @@
 = simple_form_for @doc do |f|
   = f.input :title, class:"form-control"
   = f.input :content, class:"form-control"
+  = f.label :archive
+  = f.file_field :archive
+  %br
   = f.button :submit
