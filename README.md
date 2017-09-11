@@ -1,24 +1,22 @@
-# README
+# File Cabinet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Ruby on Rails (5.1) app for File Storing
 
-Things you may want to cover:
+## Getting Started
+1. Clone the repo:
 
-* Ruby version
+        $ git clone https://github.com/juanhuttemann/filecabinet.git
 
-* System dependencies
 
-* Configuration
+2. Install Gems and Running the server:
 
-* Database creation
+        $ cd filecabinet
+        $ bundle
+        $ rails db:migrate
+        $ rails server
 
-* Database initialization
+3. Using a browser, go to `http://localhost:3000` and you'll see the Welcome Page.
 
-* How to run the test suite
+## License
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+File Cabinet is released under the [MIT License](https://opensource.org/licenses/MIT).
